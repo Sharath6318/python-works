@@ -1,0 +1,17 @@
+highest calories food name
+highest protein food name
+highest carbs food name
+highest fat food name
+highest iron food name
+highest vitamin_c food name
+
+Lowest calories food name
+Lowest protein food name
+Lowest carbs food name
+Lowest fat food name
+Lowest iron food name
+Lowest vitamin_c food name
+
+category : food name
+which category have more foods
+which category food have more calories

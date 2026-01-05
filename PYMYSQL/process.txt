@@ -1,0 +1,91 @@
+step_01 -> install mysql connector -->> pip install mysql-connector-python
+
+step_02 -> from mysql import connector
+
+step_03 ->  Create connection object...........
+
+            connection = connector.connect(
+                host = "localhost",
+                user = "root",
+                password = "Password@123",
+                database = "py_db"
+            )
+
+step_04 -> Create cursor object....................
+
+        cursor = connection.cursor()
+
+step_05 -> query create...................
+
+        query = """
+
+        create table table_name( ---------------------------------------> Create Table
+            id int primary key auto_increment,
+            name varchar(100) not null,
+            email varchar(100) not null unique,
+            password varchar(20) not null
+        )
+
+        """
+
+step_06 -> cursor.execute(query)
+
+step_07 -> connection.commit()
+
+step_08 -> close objects.............
+
+          connection.close()
+          cursor.close()
+   
+
+
+DATA INSERT INTO TABLE................................
+
+step_01 -> install mysql connector -->> pip install mysql-connector-python
+
+step_02 -> from mysql import connector
+
+step_03 ->  Create connection object...........
+
+            connection = connector.connect(
+                host = "localhost",
+                user = "root",
+                password = "Password@123",
+                database = "py_db"
+            )
+
+step_04 -> Create cursor object....................
+
+        cursor = connection.cursor()
+
+
+step_05 -> insert into table...........................
+
+        query = """
+
+        insert into table table_name(name, email, password) values(%s, %s, %s)
+
+        """
+
+        data = ('vibin', 'vibin@gamil.com', 'vib@123') ---------------------- inserting one data....
+
+        data = [                                       ---------------------- inserting Many data....
+                ('reena', 'rena@gmail.com', 'ren@123'),
+                ('teena', 'tena@gmail.com', 'tena@123'),
+                ('deepa', 'deepa@gmail.com', 'depa@123'),
+                ('shela', 'shela@gmail.com', 'shela@123'),
+            ] 
+
+step_06 -> cursor.execute(query, data) ....................... for execute inserting One data
+
+           cursor.executemany(query, data) ....................... for execute inserting Many data
+
+
+step_07 -> connection.commit()
+
+
+step_08 -> close objects.............
+
+           connection.close()
+           cursor.close()
+

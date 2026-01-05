@@ -1,0 +1,5 @@
+('Marketing', ['Employee_1', 'Employee_11', 'Employee_15', 'Employee_17', 'Employee_20', 'Employee_23', 'Employee_29', 'Employee_30', 'Employee_32', 'Employee_33', 'Employee_41', 'Employee_43', 'Employee_50'])
+('Operations', ['Employee_2', 'Employee_4', 'Employee_5', 'Employee_10', 'Employee_13', 'Employee_18', 'Employee_22', 'Employee_36', 'Employee_38', 'Employee_48'])
+('IT', ['Employee_3', 'Employee_7', 'Employee_8', 'Employee_9', 'Employee_12', 'Employee_26', 'Employee_27', 'Employee_31', 'Employee_35', 'Employee_37'])
+('Finance', ['Employee_6', 'Employee_14', 'Employee_16', 'Employee_21', 'Employee_28', 'Employee_40', 'Employee_44', 'Employee_45', 'Employee_47', 'Employee_49'])
+('HR', ['Employee_19', 'Employee_24', 'Employee_25', 'Employee_34', 'Employee_39', 'Employee_42', 'Employee_46'])

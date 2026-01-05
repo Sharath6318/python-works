@@ -1,0 +1,1 @@
+if sum(fact_num) == num:

@@ -1,0 +1,13 @@
+menu:
+    breakfeast:
+        tea
+        cofee
+        idly
+        dosa
+    launch:
+        meals
+        biriyani
+        friedrice
+    dinner:
+        aribia-rice
+        fruits

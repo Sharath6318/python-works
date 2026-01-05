@@ -1,0 +1,29 @@
+print("message") -> None -> Display message in the console
+
+input("message") -> str ->Read value through console
+
+type(object) -> int|float|bool|str|list|tuple|set|dict| -> return data type of object
+
+sum(*args) ->Return the sum of argument
+
+max(*args) -> return highest value
+
+min(*args) ->return smallest value
+
+*len(object) -> return length of the object
+
+sorted(*args, reversed = False) -> return sorted argument
+
+*round(number, ndigit) -> round number
+
+*range(start, stop, step) -> sequence of number from start to end
+
+absolute(number) ->return absolute value of a number
+
+enumarate(list|string, start=0) =>return value and index
+
+open(file_path, mode) ->for creating file references
+
+dir(class) -> return all method present inside class
+
+map
