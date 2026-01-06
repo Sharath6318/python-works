@@ -3,17 +3,23 @@ from mysql import connector
 class students:
 
     def __init__(self):
+
+        try:
         
-        self.connection = connector.connect(
-            host = "localhost",
-            user = "root",
-            password = "Password@123",
-            database = "studentsdb"
-        )
+            self.connection = connector.connect(
+                host = "localhost",
+                user = "root",
+                password = "Password@123",
+                database = "studentsdb"
+            )
 
-        self.cursor = self.connection.cursor()
+            self.cursor = self.connection.cursor()
 
-        print("Connection sucessfully completed....")
+            print("Connection sucessfully completed....")
+
+        except Exception as e:
+
+            print(e)
 
     def create_table(self):
 
@@ -69,16 +75,38 @@ class students:
             print(e)
 
     def list_records(self):
+        
+        try:
 
-        query = "select * from studentsRecords"
+            query = "select * from studentsRecords"
 
-        self.cursor.execute(query)
+            self.cursor.execute(query)
 
-        records = self.cursor.fetchall()
+            records = self.cursor.fetchall()
 
-        for record in records:
+            for record in records:
+
+                print(record)
+
+        except Exception as e:
+
+            print(e)
+
+    def retrive_record(self, id = None):
+
+        try:
+
+            query = f"select * from studentsRecords where student_id = {id}"
+
+            self.cursor.execute(query)
+
+            record = self.cursor.fetchone()
 
             print(record)
+
+        except Exception as e:
+
+            print(e)
 
     def update_record(self, student_id = None, **kwargs):
 
@@ -124,10 +152,12 @@ student_instance = students()
 # student_instance.insert_table_record(student_name="meena",gender="female",department="ECE",year_of_study=4,student_email="meena.ece@gmail.com")
 # student_instance.insert_table_record(student_name="rahul",gender="male",department="MECH",year_of_study=1,student_email="rahul.mech@gmail.com")
 # student_instance.insert_table_record(student_name="priya",gender="female",year_of_study=3,student_email="priya.it@gmail.com")
-student_instance.list_records()
+# student_instance.list_records()
 
 # student_instance.update_record(student_id = 1, year_of_study = 3)
 # student_instance.delete_record(id = 5)
+
+student_instance.retrive_record(id = 3)
 
 
 
