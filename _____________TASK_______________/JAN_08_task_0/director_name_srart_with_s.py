@@ -6,17 +6,6 @@ fr = open(file_path, encoding="utf-8")
 
 data = load(fr)
 
-for i in data:
+dir_name_start_with_S = [i.get('directors')[0] for i in data if i.get('directors')[0].startswith('S')]
 
-    duration = str(i.get('duration'))
-
-    time = duration.split(" ")[0]
-
-    if int(time) > 150:
-
-        print(i.get('name'))
-
-
-
-
-    
+print(dir_name_start_with_S)

@@ -6,17 +6,11 @@ fr = open(file_path, encoding="utf-8")
 
 data = load(fr)
 
-for i in data:
 
-    duration = str(i.get('duration'))
+for movie in data:
 
-    time = duration.split(" ")[0]
+    move_duration = int(str(movie.get('duration')).split(' ')[0])
 
-    if int(time) > 150:
+    if move_duration < 90:
 
-        print(i.get('name'))
-
-
-
-
-    
+        print(movie.get('name'))

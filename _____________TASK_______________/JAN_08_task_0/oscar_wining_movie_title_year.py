@@ -10,4 +10,4 @@ oscar_wining_movie_title_year = {i.get('name') : i.get("released_year") for i in
 
 for k, v in oscar_wining_movie_title_year.items():
 
-    print(k, v)
+    print(k, v)                    

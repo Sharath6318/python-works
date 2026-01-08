@@ -6,17 +6,7 @@ fr = open(file_path, encoding="utf-8")
 
 data = load(fr)
 
-for i in data:
+all_dir = {i.get('name') for i in data}
 
-    duration = str(i.get('duration'))
+print(f"list of unique directors from the dataset {all_dir}")
 
-    time = duration.split(" ")[0]
-
-    if int(time) > 150:
-
-        print(i.get('name'))
-
-
-
-
-    
