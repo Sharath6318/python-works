@@ -136,6 +136,3 @@ hospital_instance.retrivepatient(id = 3)
 # hospital_instance.update_record(id = 3, patient_age = 29)
 
 # hospital_instance.delete_record(id = "2")
-
-
-
